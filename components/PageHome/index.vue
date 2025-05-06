@@ -24,7 +24,8 @@
 
                 <div class="ph-main-postCard" v-for="it in boke.showedPosts">
                     <div class="ph-main-postCard-cover">
-                        <img :src="it.frontmatter.cover || '/cover/mo.png'" alt="" class="ph-main-postCard-cover-img">
+                        <img :src="withBase(it.frontmatter.cover || '/cover/mo.png')" alt=""
+                            class="ph-main-postCard-cover-img">
                     </div>
                     <div class="ph-main-postCard-title">
                         <a :href="withBase(it.url)">
