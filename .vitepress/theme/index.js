@@ -3,7 +3,10 @@ import { h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import './styles/index.scss'
 
+// 导入组件
 import PageHome from '../../components/PageHome/index.vue'
+
+import cardArticles from '../../components/cardArticles/index.vue'
 
 import { createPinia } from 'pinia'
 
@@ -19,8 +22,9 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
-
     app.component('PageHome', PageHome)
+
+    app.component('cardArticles', cardArticles)
     const pinia = createPinia()
     app.use(pinia)
 

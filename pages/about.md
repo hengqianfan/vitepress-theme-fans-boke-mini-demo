@@ -1,13 +1,4 @@
-我是关于
+## 1. 本站知识产权
 
-::: code-group
+## 2. 粉丝群
 
-```javascript
-const res = 0
-```
-
-```sass
-/* ceshi  */
-```
-
-:::
