@@ -32,6 +32,10 @@ export default createContentLoader('posts/*.md', {
             } else {
                 rawData[i].frontmatter.category = '未分类'
             }
+            // 返回格式化的时间数据
+            // rawData[i].frontmatter.time = rawData[i].frontmatter.moid.slice(0, 6).replace(/(\d{2})(\d{2})(\d{2})/, '20$1-$2-$3');
+            rawData[i].frontmatter.time = rawData[i].frontmatter.moid.slice(0, 6);
+
 
 
 
