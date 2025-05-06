@@ -4,8 +4,10 @@ import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-i
 export default defineConfig({
   title: "界 · 衡千帆",
   description: "A VitePress Site",
+  base: '/vitepress-theme-fans-boke-mini-demo/',
   themeConfig: {
     logo: '/icon/jie.png',
+
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       // { text: 'Home', link: '/' },
