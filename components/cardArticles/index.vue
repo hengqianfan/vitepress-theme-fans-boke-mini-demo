@@ -29,7 +29,10 @@ import { withBase } from 'vitepress';
         height: 180px;
         border-radius: 15px 15px 0 0;
         overflow: hidden;
-        // padding: 10px;
+        // 去除 图片放大样式 的 污染
+        padding: 0 !important;
+        box-shadow: none;
+
     }
 
     .ca-title {

@@ -22,7 +22,10 @@ export default defineConfig({
       { text: '关于', link: '/pages/about' }
     ],
     outline: {
-      label: '页面大纲'
+
+      label: '页面大纲',
+      level: [2, 6]
+
     },
 
     sidebar: [],

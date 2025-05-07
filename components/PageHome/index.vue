@@ -87,6 +87,8 @@ const toPage = (mo) => {
 </script>
 
 <style lang="scss" scoped>
+@use './app.scss';
+
 .ph-all {
     width: 100%;
     min-height: 90vh;
