@@ -18,7 +18,7 @@ import cardVideo from '../../components/cardVideo/index.vue'
 
 import cardComment from '../../components/cardComment/index.vue'
 
-
+import cardCommentGiscus from '../../components/cardCommentGiscus/index.vue'
 
 import DocAfter from '../../components/DocAfter/index.vue'
 
@@ -37,7 +37,7 @@ export default {
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
       'doc-before': () => h(DocAfter),
-      'doc-after': () => h(cardComment)
+      'doc-after': () => h(cardCommentGiscus)
 
     })
   },

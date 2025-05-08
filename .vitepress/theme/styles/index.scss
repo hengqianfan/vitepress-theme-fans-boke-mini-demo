@@ -10,11 +10,12 @@
 }
 
 .medium-zoom-image {
-    background-color: rgb(250, 250, 250);
+
+    background-color: var(--vp-c-bg);
     padding: 10px;
     z-index: 2000;
     box-shadow: 3px 3px 5px #dedede,
-        -3px -3px 5px #ffffff;
+        -3px -3px 5px #faf9f9;
     border-radius: 5px;
 }
 

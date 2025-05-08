@@ -9,12 +9,17 @@ export default defineConfig({
     logo: '/icon/jie.png',
 
     // https://vitepress.dev/reference/default-theme-config
+
     nav: [
       { text: '主页', link: '/' },
       {
         text: '我的宇宙', items: [
-          { text: 'Bilibili', link: 'https://space.bilibili.com/3546824455489827' },
-          { text: '小黑盒', link: 'https://www.xiaoheihe.cn/bbs/user_profile_share?user_id=51427625&h_src=writer' },
+          { text: '<i class="iconfont icon-bilibili"></i> Bilibili', link: 'https://space.bilibili.com/3546824455489827' },
+          { text: '<i class="iconfont icon-github"></i> Github', link: 'https://github.com/hengqianfan' },
+          { text: '<i class="iconfont icon-youtube"></i> Youtube', link: 'https://github.com/hengqianfan' },
+
+          { text: '<i class="iconfont icon-heihe"></i> Xiaoheihe', link: 'https://www.xiaoheihe.cn/bbs/user_profile_share?user_id=51427625&h_src=writer' },
+
 
 
         ]

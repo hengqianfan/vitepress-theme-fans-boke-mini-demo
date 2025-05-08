@@ -1,2 +1,1 @@
-# vitepress-theme-fans-boke-mini-demo
-这是一个vitepress主题
+这是 Boke-mini 主题的示例网站 
