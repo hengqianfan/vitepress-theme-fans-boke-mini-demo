@@ -1,3 +1,4 @@
 export const bokeMain = {
-    base: '/'
+    base: '/',
+    ipc: '黔ICP备-2023015500号-3'
 }

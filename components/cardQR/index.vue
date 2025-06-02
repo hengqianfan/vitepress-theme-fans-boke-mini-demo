@@ -1,6 +1,6 @@
 <template>
     <div class="cqr-all">
-        <img src="../../public/others/qqpd.png" alt="" class="cqrall">
+        <img src="/others/qqpd.png" alt="" class="cqrall">
     </div>
 </template>
 

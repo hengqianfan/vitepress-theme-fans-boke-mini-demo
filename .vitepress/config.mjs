@@ -5,6 +5,10 @@ export default defineConfig({
   title: "界 · 衡千帆",
   description: "A VitePress Site",
   base: '/vitepress-theme-fans-boke-mini-demo/',
+  // 标签页的LOGO
+  head: [
+    ['link', { rel: 'icon', href: './icon/jie.png' }]
+  ],
   themeConfig: {
     logo: '/icon/jie.png',
 
@@ -17,13 +21,16 @@ export default defineConfig({
           { text: '<i class="iconfont icon-bilibili"></i> Bilibili', link: 'https://space.bilibili.com/3546824455489827' },
           { text: '<i class="iconfont icon-github"></i> Github', link: 'https://github.com/hengqianfan' },
           { text: '<i class="iconfont icon-youtube"></i> Youtube', link: 'https://github.com/hengqianfan' },
-
-          { text: '<i class="iconfont icon-heihe"></i> Xiaoheihe', link: 'https://www.xiaoheihe.cn/bbs/user_profile_share?user_id=51427625&h_src=writer' },
-
-
+          { text: '<i class="iconfont icon-heihe"></i> heihe', link: 'https://www.xiaoheihe.cn/bbs/user_profile_share?user_id=51427625&h_src=writer' },
+        ]
+      },
+      {
+        text: '我的项目', items: [
+          { text: '<i class="iconfont icon-github"></i> boke主题', link: 'https://hengqianfan.github.io/vitepress-theme-fans-boke/' },
 
         ]
       },
+
       { text: '关于', link: '/pages/about' }
     ],
     outline: {

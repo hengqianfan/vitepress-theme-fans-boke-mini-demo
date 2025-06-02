@@ -107,6 +107,9 @@ const getALLCategory = (data) => {
     // 执行函数
     moveFirstToEnd(arr, '未分类')
 
+    // 将 最新  推送到数组首位
+    arr.unshift('最新')
+
     // 返回最终处理后的数组
     return arr
 }
@@ -181,6 +184,7 @@ export const useBokeStore = defineStore('boke', {
         sortedPosts: sortedPosts,
         showedPosts: showedPosts,
         nowCategory: categories[0],
+        nowCategoryIndex: 0,
         pagesTotal: pagesTotal,
         currentPage: currentPage,
         pageSize: pageSize,
@@ -188,8 +192,11 @@ export const useBokeStore = defineStore('boke', {
 
     }),
     actions: {
-        changeNowCategory(mo) {
+        changeNowCategory(mo, index) {
             this.nowCategory = mo
+
+            this.nowCategoryIndex = index
+
             sort(mo)
             // 更新页面
             this.showedPosts = paginate(sortedPosts.value, 1, this.pageSize)
@@ -197,6 +204,8 @@ export const useBokeStore = defineStore('boke', {
 
             // 文章分类改变时，将底部当前页复位为 1 
             this.currentPage = 1
+
+
 
         },
         changeCurrentPage(mo) {
