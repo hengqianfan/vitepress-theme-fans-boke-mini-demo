@@ -16,6 +16,7 @@ export default defineConfig({
 
     nav: [
       { text: '主页', link: '/' },
+      { text: '知识库', link: 'https://hengqianfan.github.io/vitepress-theme-fans-boke/' },
       {
         text: '我的宇宙', items: [
           // { text: '<i class="iconfont icon-bilibili"></i> Bilibili', link: 'https://space.bilibili.com/3546824455489827' },
