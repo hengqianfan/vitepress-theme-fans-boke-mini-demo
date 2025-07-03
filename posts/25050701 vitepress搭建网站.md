@@ -11,7 +11,14 @@ cover: '/cover/25050701.png'
 
 - 如果没有 Github 账号，可以参考以下文章：
 
-<card-articles />
+<card-articles  
+    xSrc="/cover/github.png"  
+    xUrl="/posts/25050702 注册Github账号"  
+    xTitle="Github账号注册" 
+    />
+
+
+
 
 在 github 网站上新建仓库 
 

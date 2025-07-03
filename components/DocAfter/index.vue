@@ -33,12 +33,21 @@ const bannerImageUrl = computed(() => {
 
 <style lang="scss" scoped>
 @use './app.scss';
+@use './dark.scss';
 
 .da-all {
     position: relative;
+
+
+
+
+
     box-shadow: 2px 2px 3px #dedede,
         -2px -2px 3px #ffffff;
     margin-bottom: 30px;
+
+    border-radius: 10px;
+
 
     .da-cover {
         height: 200px;
@@ -52,6 +61,8 @@ const bannerImageUrl = computed(() => {
 
             width: 100%;
             height: 100%;
+            border-radius: 10px;
+
 
             // 截取中间部分为封面
             object-fit: cover;
@@ -78,6 +89,8 @@ const bannerImageUrl = computed(() => {
 
                 padding: 10px;
                 border-radius: 5px;
+
+
                 box-shadow: 3px 3px 5px #dedede,
                     -3px -3px 5px #ffffff;
 

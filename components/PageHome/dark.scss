@@ -1,151 +1,4 @@
-<template>
-    <div class="ph-all">
-
-        <div class="ph-nav">
-
-
-            <!-- 获取分类列表，但是只允许 -->
-            <!-- <div class="ph-nav-item" v-for="it in boke.categories.slice(0, 3)"> -->
-            <div :class="['ph-nav-item', { 'active': boke.nowCategoryIndex == index }]"
-                v-for="(it, index) in boke.categories" @click="boke.changeNowCategory(it, index)">
-                {{ it }}
-            </div>
-
-
-
-        </div>
-
-        <div class="ph-main">
-
-
-
-            <div class="ph-main-posts">
-
-
-
-                <div class="" v-if="boke.showedPosts === `[]`">暂无文章，请添加文章！</div>
-
-                <div class="ph-main-postCard" v-for="it in boke.showedPosts">
-                    <div class="ph-main-postCard-cover">
-                        <img :src="withBase(it.frontmatter.cover || '/cover/mo.png')" alt=""
-                            class="ph-main-postCard-cover-img">
-                    </div>
-                    <div class="ph-main-postCard-title">
-                        <a :href="withBase(it.url)">
-                            {{ it.frontmatter.title }}
-                        </a>
-                    </div>
-
-
-                    <div class="ph-main-postCard-info">
-                        <!-- <div class="ph-main-postCard-info-time">2025-12-12</div> -->
-                        <div class="ph-main-postCard-info-time">{{ formatDate(it.frontmatter.time) }}</div>
-
-                        <div class="ph-main-postCard-info-tags" v-if="it.frontmatter.tags">
-                            <div class="ph-main-postCard-info-tag" v-for="tag in it.frontmatter.tags.slice(0, 3)">
-                                {{ tag }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-
-
-            <div class="ph-main-paginate">
-
-                <div class="ph-main-paginate-button" @click="boke.changeCurrentPage(boke.currentPage - 1)">上一页</div>
-
-                <div class="ph-main-paginate-data">{{ boke.currentPage }} &nbsp / &nbsp {{+ boke.pagesTotal }}</div>
-
-                <div class="ph-main-paginate-button" @click="boke.changeCurrentPage(boke.currentPage + 1)">下一页</div>
-
-
-
-            </div>
-
-
-
-
-
-
-
-
-
-
-        </div>
-
-
-
-        <div class="ph-siteinfo">
-
-
-            <div class="ph-siteinfo-theme">
-                <img src="https://img.shields.io/badge/主题-4285F4" alt="">
-
-                <div class="ph-siteinfo-theme-name">
-                    <a href="https://hengqianfan.github.io/vitepress-theme-fans-instructions/"
-                        target="_blank">Boke-mini</a>
-                </div>
-            </div>
-
-
-            <div class="ph-siteinfo-powered">
-                Powered |
-                <div class="">VitePress</div>
-            </div>
-
-
-            <div class="ph-siteinfo-icp">
-
-                {{ bokeMain.ipc }}
-            </div>
-
-
-
-
-        </div>
-
-    </div>
-</template>
-
-<script setup>
-import { data as posts } from '../../data/posts.data'
-import { bokeMain } from '../../data/main'
-
-import { useBokeStore } from '../../stores/boke'
-import { useRouter, withBase } from 'vitepress'
-import { formatDate } from '../../.vitepress/tools/formatDate'
-const router = useRouter()
-
-const boke = useBokeStore()
-const toPage = (mo) => {
-    // 使用绝对路径（需包含 VitePress 的 base 配置，如存在）
-    router.go(mo)
-}
-
-
-
-</script>
-
-<style lang="scss" scoped>
-@use './app.scss';
-@use './dark.scss';
-
-
-.ph-all {
-    // $lineColor: #f5f0f0;
-    // background-image: linear-gradient($lineColor 1px, transparent 1px),
-
-    //     linear-gradient(to right, $lineColor 1px, transparent 1px);
-
-    // background-size: 100% 10px,
-    //     10px 100%;
-    // background-position: 0 0;
-
-
+.dark .ph-all {
 
     width: 100%;
     min-height: 90vh;
@@ -169,8 +22,9 @@ const toPage = (mo) => {
         border-radius: 20px;
 
 
-        box-shadow: 1px 1px 2px #dedede,
-            -1px -1px 2px #f5f0f0;
+
+        box-shadow: 1px 1px 2px #8b8989,
+            -1px -1px 2px #6b6868;
 
 
 
@@ -182,7 +36,7 @@ const toPage = (mo) => {
             text-align: center;
             font-family: '优设标题黑';
             font-size: 18px;
-            color: rgb(80, 80, 80);
+            color: rgb(211, 155, 155);
             color: var(--vp-c-text-1);
 
             margin: 0 30px;
@@ -199,7 +53,9 @@ const toPage = (mo) => {
 
             // 配色二
             color: blueviolet;
-            border-bottom: 1px solid blue;
+            color: white;
+
+            border-bottom: 1px solid rgb(170, 170, 214);
 
 
             transition: all 0.3s;
@@ -211,14 +67,14 @@ const toPage = (mo) => {
     .ph-main {
 
 
-        width: 100%;
+        width: 80%;
         margin: 0px auto;
         min-height: 10vh;
         display: flex;
         flex-direction: column;
         padding-bottom: 20px;
         // 底部网站信息的分割线
-        border-bottom: 1px solid rgb(228, 225, 225);
+        border-bottom: 1px solid rgb(59, 51, 51);
 
 
 
@@ -241,9 +97,8 @@ const toPage = (mo) => {
                 background-color: var(--vp-c-bg);
 
 
-
-                box-shadow: 5px 5px 10px #dedede,
-                    -5px -5px 10px #f0eeee;
+                box-shadow: 1px 1px 2px #8b8989,
+                    -1px -1px 2px #6b6868;
 
                 .ph-main-postCard-cover {
                     width: 320px;
@@ -345,6 +200,7 @@ const toPage = (mo) => {
 
 
 
+
         }
 
         .ph-main-paginate {
@@ -361,8 +217,8 @@ const toPage = (mo) => {
                 margin: 0 15px;
                 border-radius: 5px;
                 text-align: center;
-                box-shadow: 2px 2px 8px #dedede,
-                    -2px -2px 8px #ffffff;
+                box-shadow: 1px 1px 2px #8b8989,
+                    -1px -1px 2px #6b6868;
 
 
             }
@@ -467,4 +323,3 @@ const toPage = (mo) => {
 
     }
 }
-</style>

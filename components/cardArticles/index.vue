@@ -1,13 +1,14 @@
 <template>
     <div class="ca-all">
-        <img :src="withBase('/cover/mo.png')" alt="" class="ca-cover">
+        <img :src="withBase(xSrc || '/cover/mo.png')" alt="" class="ca-cover" />
 
-        <a class="ca-title" :href="withBase('/posts/25050702 注册Github账号')">Github账号注册</a>
+        <a class="ca-title" :href="withBase(xUrl || '⭐=必须提供文章链接（xUrl）')" target="_blank">{{ xTitle || '请提供文章标题' }} </a>
     </div>
 </template>
 
 <script setup>
 import { withBase } from 'vitepress';
+const props = defineProps(['xSrc', 'xTitle', 'xUrl'])
 
 </script>
 

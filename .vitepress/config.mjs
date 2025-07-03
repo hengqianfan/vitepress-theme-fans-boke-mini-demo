@@ -38,7 +38,6 @@ export default defineConfig({
 
       label: '页面大纲',
       level: [2, 6]
-
     },
 
     sidebar: [],
