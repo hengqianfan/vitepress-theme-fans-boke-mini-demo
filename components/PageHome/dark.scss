@@ -1,26 +1,10 @@
 .dark .ph-all {
 
-    width: 100%;
-    min-height: 90vh;
-    // background-color: wheat;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
+
 
     .ph-nav {
-        // width: 80%;
-        min-height: 40px;
-        max-width: 100%;
-        overflow-x: scroll;
-        margin: 10px auto;
-        padding: 0 20px;
-        background-color: var(--vp-c-bg);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        border-radius: 20px;
 
+        background-color: var(--vp-c-bg);
 
 
         box-shadow: 1px 1px 2px #8b8989,
@@ -29,17 +13,14 @@
 
 
         .ph-nav-item {
-            min-width: 30px;
-            height: 25px;
-            line-height: 25px;
 
-            text-align: center;
+
             font-family: '优设标题黑';
             font-size: 18px;
             color: rgb(211, 155, 155);
             color: var(--vp-c-text-1);
 
-            margin: 0 30px;
+
             transition: all 0.3s;
         }
 
@@ -67,7 +48,6 @@
     .ph-main {
 
 
-        width: 80%;
         margin: 0px auto;
         min-height: 10vh;
         display: flex;
@@ -82,18 +62,9 @@
 
 
 
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: flex-start;
-
-
             .ph-main-postCard {
-                width: 320px;
-                height: 250px;
 
-                margin: 10px;
-                border-radius: 10px;
+
                 background-color: var(--vp-c-bg);
 
 
@@ -101,12 +72,8 @@
                     -1px -1px 2px #6b6868;
 
                 .ph-main-postCard-cover {
-                    width: 320px;
-                    height: 180px;
-                    border-radius: 10px 10px 0 0;
-                    ;
-                    overflow: hidden;
-                    transition: all 0.6s;
+
+
 
                     .ph-main-postCard-cover-img {
                         width: 100%;
@@ -135,8 +102,7 @@
 
                 .ph-main-postCard-title {
 
-                    height: 40px;
-                    line-height: 40px;
+
                     text-align: center;
                     font-family: '优设标题黑';
 
